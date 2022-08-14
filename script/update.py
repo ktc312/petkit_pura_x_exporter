@@ -20,6 +20,7 @@ devices = petkit.discover_devices()
 records = sorted([
     r
     for device in devices
+    if device.name == 'PURA X'
     for r in petkit.get_device_records(device)
 ], key=lambda x: x[0]
 )
